@@ -143,7 +143,9 @@ layery.init = function() {
       });
 
       // add modal instance to glass-content layer
-      layery.Glass.Content.append(windowInstance);
+      var wrapper = $('<div>').addClass('modal-wrapper');
+      wrapper.append(windowInstance);
+      layery.Glass.Content.append(wrapper);
 
       // toggle blur when modal on
       layery.toggleBlur();
